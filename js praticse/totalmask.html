@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const marks = [40, 50, 60, 70, 80]
+
+        function getmarks(marks) {
+            let total = 0;
+            for (let i = 0; i < 6; i++) {
+                total = total + marks[i];
+            }
+            return total;
+        }
+
+        function getpercentage(getmarks) {
+            let percentage;
+            percentage = (getmarks / 500) * 100;
+            console.log("percentage", percentage);
+
+        }
+
+        function getdivison(getgetpercentage) {
+            if (getpercentage <= 100 && getpercentage >= 80) {
+                console.log("distinction");
+            }
+            if (getpercentage < 80 && getpercentage >= 70) {
+                console.log("1stdiv");
+            } else if (getpercentage < 70 && getpercentage >= 60) {
+                console.log("2nddiv");
+            } else if (getpercentage < 60 && getpercentage >= 50) {
+                console.log("3rddiv");
+            } else {
+                console.log("fail");
+            }
+        }
+
+        function getresult(getmarks) {
+            if (getmarks <= 100 && getmarks >= 40) {
+                console.log("YOU ARE PASS");
+            } else {
+                console.log("YOU ARE FAIL");
+            }
+        }
+        getmarks();
+
+        getpercentage(getmarks);
+        getdivison(getpercentage);
+        getresult(getmarks);
+    </script>
+
+</body>
+
+</html>

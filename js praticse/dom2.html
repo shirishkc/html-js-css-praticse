@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleclick()">CLICK ME</button>
+    <button>HOVER ME!</button>
+    <input text="text" id="search" /> name:
+    <span id="display"></span>
+    <div id="text-content"></div>
+    <div id="inner-html"></div>
+    <script type="text/javascript">
+        document.querySelector("#inner-html").innerHTML = "<span style='color:red'>INNER HTML</span>";
+        document.querySelector("#text-content").textContent = "<span style ='color:red'>INNER HTML</span>"
+
+        function handleclick() {
+            alert("handling");
+        }
+        const btnEl = document.querySelectorAll("button");
+        for (element of btnEl) {
+            element.addEvenlistener('click', function() {
+                alert("second click");
+            });
+        }
+        const serchEl = document.querySelector("#serch");
+        serchEl.onkeyup = function() {
+                console.log("vayo");
+            }
+            //it overvideos
+        serchEl.onkeydown = function() {
+            const displayEl = document.querySelector("display");
+            displayEl.textContent
+        }
+    </script>
+</body>
+
+</html>

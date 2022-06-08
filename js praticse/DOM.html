@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">hello</p>
+    <p class="hi">hi</p>
+    <span>Span1</span>
+    <span>Span2</span>
+    <h1 class="hi">hi</h1>
+    <div>
+        <span>div span 1</span>
+        <span>div span 2</span>
+    </div>
+    <script type="text/javascript">
+        const el = document.getElementById('p1');
+        el.style.color = "red";
+        console.log(el); //el=object
+
+
+
+        const pEl = document.getElementsByTagName("p");
+        for (element of pEl) {
+            element.style.color = "blue"; ////element
+        }
+        const hiEl = document.getElementsByClassName("hi");
+        for (element of hiEl) {
+            element.style.color = "pink";
+        }
+        const qp1El = document.querySelector("#p1");
+        qp1El.style.backgroundColor = "green";
+        const divspanEl = document.querySelectorAll("div span")
+        for (element of divspanEl) {
+            element.style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+</html>
