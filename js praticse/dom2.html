@@ -24,12 +24,12 @@
         }
         const btnEl = document.querySelectorAll("button");
         for (element of btnEl) {
-            element.addEvenlistener('click', function() {
+            element.addEventListner('click', function() {
                 alert("second click");
             });
         }
         const serchEl = document.querySelector("#serch");
-        serchEl.onkeyup = function() {
+        serchEl.onkeydown = function() {
                 console.log("vayo");
             }
             //it overvideos
